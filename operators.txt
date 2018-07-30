@@ -1,0 +1,8 @@
+An algorithm to perform the operations(addition, subtraction, multiplication, division) in calculator (using Functions)
+
+Step 1: Enter the numbers to be operated.
+Step 2: Name a function called "add" with a,b as parameters.
+Step 3: Similarly, create functions as "sub", "mul", "div" with those a,b parameters.
+Step 4: Inside the add function, perform add=a+b.
+Step 5: Similarly for sub function, perform sub=a-b, mul=a*b for multiplication, div=a/b for division.
+Step 6: If function is called in the program, it return their respective values as result.
