@@ -1,14 +1,16 @@
-'''Assume s is a string of lower case characters.
-
-Write a program that prints the number of times the string 'bob' occurs in s. For example, if s = 'azcbobobegghakl', then your program should print
-
-Number of times bob occurs is: 2'''
+'''
+Author:Prasamsa
+Date:2 august 2018
+'''
 
 def main():
-	s = raw_input()
-	# the input string is in s
-	# remove pass and start your code here
-	pass
+    '''count substring'''
+    str_one = input()
+    c_c = 0
+    for i in range(len(str_one)):
+        if str_one[i:i+3] == "bob":
+            c_c = c_c+1
+    print(c_c)
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
