@@ -1,4 +1,7 @@
-#Assign an input to happy variable
-happy = int(input("Enter the input:"))
-if happy>2:
-	print ('hello world')
+'''
+Author: Prasamsa
+Date: 1 august 2018
+'''
+HAPPY = int(input("Enter the input:"))
+if HAPPY > 2:
+    print('hello world')

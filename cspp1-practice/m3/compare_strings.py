@@ -1,6 +1,10 @@
+'''
+Author: Prasamsa
+Date: 1 august 2018
+'''
 VARA = 2
 VARB = "hello"
-if type(VARA) is str or type(VARB) is str:
+if isinstance(VARA) is str or isinstance(VARB) is str:
     print("string involved")
 elif VARA > VARB:
     print("bigger")
