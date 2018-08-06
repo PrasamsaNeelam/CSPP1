@@ -1,21 +1,22 @@
-# Write a python program to find the square root of the given number
-# using approximation method
-
-# testcase 1
-# input: 25
-# output: 4.999999999999998
-
-# testcase 2
-# input: 49
-# output: 6.999999999999991
+'''
+Author: Prasamsa
+Date: 6 august 2018
+'''
 
 def main():
-	s = raw_input()
-	# epsilon and step are initialized
-	# don't change these values
-	epsilon = 0.01
-	step = 0.1
-	# your code starts here
+    '''input the value to find square root'''
+    square_input = int(input())
+    epsilon = 0.01
+    low_value = 0.0
+    high_value = square_input
+    ans_value = (high_value + low_value)/2.0
+    while abs(ans_value**2 - square_input) >= epsilon:
+        if ans_value**2 < square_input:
+            low_value = ans_value
+        else:
+            high_value = ans_value
+        ans_value = (high_value + low_value)/2.0
+    print(ans_value)
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
