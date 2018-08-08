@@ -11,10 +11,10 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     string_value = ""
     for char in secret_word:
-    	if char in letters_guessed:
-    		string_value = string_value + char
-    	else:
-    		string_value = string_value + "_"
+        if char in letters_guessed:
+            string_value = string_value + char
+        else:
+            string_value = string_value + "_"
     return string_value
 
 
