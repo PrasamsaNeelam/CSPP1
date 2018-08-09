@@ -1,28 +1,32 @@
 '''
-Author: Prasamsa
-Date: 7 august 2018
+Author:Prasamsa
+Date: 7 August 2018
 '''
-
-def is_in(char, a_str):
+def isin(char, astr):
+    '''sorting of a given string'''
+    sort_str = sorted(astr)
+    boolean = isin_2(0,len(sort_str),char, sort_str)
+    return boolean
+def isin_2(min_um, max_um, char, astr):
     '''
-    char: a single character
-    aStr: an alphabetized string
-
-    returns: True if char is in aStr; False otherwise
+    char:a single character
+    astr:an alphabetical string
+    it returns true if char is present in astr otherwise false
     '''
-    if char == a_str[0]:
-        return True
-    elif len(a_str) == 1:
-        return False
-    return is_in(char, a_str[1: ])
-
-
+    mid = (min_um + max_um)//2
+    if astr[mid] == char:
+        return "True"
+    elif mid in (min_um, max_um):
+        return "False"
+    else:
+        if astr[mid] > char:
+            return isin_2(min_um, mid, char, astr)
+        elif astr[mid] < char:
+            return isin_2(mid, max_um, char, astr)
 def main():
-    '''checks whether char is in the given string'''
+    '''main function'''
     data = input()
     data = data.split()
-    print(is_in(data[0], data[1]))
-
-
+    print(isin((data[0][0]), data[1]))
 if __name__ == "__main__":
     main()
