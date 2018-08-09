@@ -13,7 +13,7 @@ def get_available_letters(letters_guessed):
     l_list = list(string)
     for char in letters_guessed:
     	if char in l_list:
-    		l_list = l_list.remove(char)
+    	    l_list.remove(char)
     return ''.join(l_list)
 
 def main():
