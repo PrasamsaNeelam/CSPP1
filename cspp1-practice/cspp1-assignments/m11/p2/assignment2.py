@@ -3,7 +3,7 @@ Author: Prasamsa
 Date: 10 august 2018
 '''
 
-def updateHand(hand, word):
+def update_hand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -34,7 +34,7 @@ def main():
         l = data.split()
         adict[l[0]] = int(l[1])
     data1 = input()
-    print(updateHand(adict, data1))
+    print(update_hand(adict, data1))
 
 
 if __name__ == "__main__":
