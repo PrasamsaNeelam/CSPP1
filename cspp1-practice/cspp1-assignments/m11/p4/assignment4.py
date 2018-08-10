@@ -11,7 +11,7 @@ def calculate_hand_len(hand):
     """
     cnt_value = 0
     for k in hand:
-        values = k.values()
+        values = hand[k]
         cnt_value += values
     return cnt_value
 
