@@ -8,7 +8,7 @@ def update_hand(hand, word):
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
     a letter appears in 'word', 'hand' has at least as
-    many of that letter in it. 
+    many of that letter in it.
 
     Updates the hand: uses up the letters in the given word
     and returns the new hand, without those letters in it.
@@ -27,9 +27,9 @@ def update_hand(hand, word):
 
 def main():
     '''main function'''
-    n = input()
+    n_value = input()
     adict = {}
-    for _ in range(int(n)):
+    for _ in range(int(n_value)):
         data = input()
         l_in = data.split()
         adict[l_in[0]] = int(l_in[1])
