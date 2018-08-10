@@ -16,7 +16,7 @@ def update_hand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     for k in word:
@@ -29,10 +29,10 @@ def main():
     '''main function'''
     n = input()
     adict = {}
-    for i in range(int(n)):
+    for _ in range(int(n)):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        l_in = data.split()
+        adict[l_in[0]] = int(l_in[1])
     data1 = input()
     print(update_hand(adict, data1))
 
