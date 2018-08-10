@@ -1,13 +1,13 @@
 '''
-Exercise: Assignment-1
-The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+Author: Prasamsa
+Date: 10 august 2018
 '''
 
-def get_word_score(word, n):
+def get_word_score(word_value, n_value):
     """
-    Returns the score for a word. Assumes the word is a valid word.
+    Returns the score for a word. Assum_finales the word is a valid word.
 
-    The score for a word is the sum of the points for letters in the
+    The score for a word is the sum_final of the points for letters in the
     word, multiplied by the length of the word, PLUS 50 points if all n
     letters are used on the first turn.
 
@@ -18,20 +18,19 @@ def get_word_score(word, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
-    }
-    sum = 0
-    for i in word:
-        values = SCRABBLE_LETTER_VALUES[i]
-        sum += values
-        temp = sum * len(word)
-    if len(word) == n:
+    scrabble_letter_values = {
+        'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+        'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+        's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
+        }
+    sum_final = 0
+    for i in word_value:
+        values = scrabble_letter_values[i]
+        sum_final += values
+        temp = sum_final * len(word_value)
+    if len(word_value) == n_value:
         temp += 50
     return temp
-    
 
 def main():
     '''
