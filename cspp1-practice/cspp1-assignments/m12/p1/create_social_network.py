@@ -35,7 +35,7 @@ def create_social_network(data):
     list_1 = []
     list_1.append(data)
     a_dict = {}
-    for i in range(len(list_1)):
+    for i in list_1:
         l2_in = i.split("follows")
         if l2_in[0] in a_dict:
             l2_in[1] = l2_in[1].split(",")
