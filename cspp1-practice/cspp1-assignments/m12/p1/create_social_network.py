@@ -33,6 +33,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     list_1 = []
+    for _ in lines:
     list_1.append(data)
     a_dict = {}
     for i in list_1:
@@ -41,11 +42,9 @@ def create_social_network(data):
             l2_in[1] = l2_in[1].split(",")
             for j in l2_in[1]:
                 a_dict[l2_in[0]].append(j)
-        elif l2_in not in a_dict:
+        else:
             l2_in[1] = l2_in[1].split(",")
             a_dict[l2_in[0]] = l2_in[1]
-        else:
-            print({})
 
         for k in range(len(l2_in[1])):
             a_dict[l2_in[0]][k] = str(a_dict[l2_in[0]][k])
