@@ -1,7 +1,6 @@
 '''
-    This is a continuation of the social network problem
-    There are 3 functions below that have to be completed
-    Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
+    Author: Prasamsa
+    Date: 11 august 2018
 '''
 
 def follow(network, arg1, arg2):
@@ -13,8 +12,6 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
 
 def unfollow(network, arg1, arg2):
     '''
@@ -25,8 +22,6 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
 
 def delete_person(network, arg1):
     '''
@@ -38,8 +33,6 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
 
 def main():
     '''

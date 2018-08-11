@@ -48,7 +48,7 @@ def create_social_network(data):
             a_dict[l2_in[0]] = l2_in[1]
 
         for k in range(len(l2_in[1])):
-            a_dict[l2_in[0]][k] = int(a_dict[l2_in[0]][k])
+            a_dict[l2_in[0]][k] = str(a_dict[l2_in[0]][k])
 
         print(adict)   
 
