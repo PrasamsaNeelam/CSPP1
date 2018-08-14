@@ -36,9 +36,9 @@ def is_flush(hand):
     '''
     card = hand[0][1]
     for i in hand:
-        if i[1] == card:
-            return True
-    return False
+        if i[1] != card:
+            return False
+    return True
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -47,11 +47,11 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    if is_straight(hand) and is_flush(hand) is True:
+    if is_straight(hand) and is_flush(hand):
         return 3
-    if is_flush(hand) is True:
+    if is_flush(hand):
         return 2
-    if is_straight(hand) is True:
+    if is_straight(hand):
         return 1
     return 0
     # By now you should have seen the way a card is represented.
