@@ -33,7 +33,7 @@ def is_flush(hand):
         if hand[i][1] == card:
             return True
     return False
-    def hand_rank(hand):
+def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
         return a value that max can use to identify the best hand.
