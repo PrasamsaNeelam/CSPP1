@@ -18,7 +18,7 @@ def is_straight(hand):
     a_dict = {'2':2,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     for i in a_dict:
         for j in hand:
-            if i == j:
+            if i == j[0]:
                 list_one.append(i[0])
     print(list_one)
     for i in range(len(sequence) - 4):
