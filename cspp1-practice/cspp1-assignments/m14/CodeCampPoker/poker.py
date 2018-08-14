@@ -30,7 +30,7 @@ def is_flush(hand):
     '''
     card = hand[0][1]
     for i in hand:
-        if hand[i][1] == card
+        if hand[i][1] == card:
             return True
     return False
     def hand_rank(hand):
