@@ -41,9 +41,9 @@ def hand_rank(hand):
     '''
     if is_straight(hand) and is_flush(hand) is True:
         return 3
-    elif is_flush(hand) = True:
+    elif is_flush(hand) is True:
         return 2
-    elif is_straight(hand) = True:
+    elif is_straight(hand) is True:
         return 1
     return 0
     # By now you should have seen the way a card is represented.
