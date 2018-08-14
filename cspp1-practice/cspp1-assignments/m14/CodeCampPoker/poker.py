@@ -20,7 +20,6 @@ def is_straight(hand):
         for j in hand:
             if i == j[0]:
                 list_one.append(i[0])
-    print(list_one)
     for i in range(len(sequence) - 4):
         if sequence[i:i+5] == ''.join(list_one):
             return True
