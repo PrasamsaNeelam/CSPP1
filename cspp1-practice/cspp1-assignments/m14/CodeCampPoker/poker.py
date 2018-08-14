@@ -13,9 +13,15 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    sequence = '23456789TJQKA'
+    list_one = []
+    a_dict = {'2':2,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     hand = sorted(hand)
-    for i in hand:
-        if hand[i]-hand[i-1] == 1 and hand[i-1]-hand[i-2] == 1 and hand[i-2]-hand[i-3] == 1 and hand[i-3]-hand[i-4] == 1:
+    for i in a_dict:
+        for i in hand[i][0]:
+            list_one.append(i)
+    for i in range(len(sequence) - 4):
+        if sequence[i:i+5] == ''.join(list_one):
             return True
     return False
 
@@ -43,9 +49,9 @@ def hand_rank(hand):
     '''
     if is_straight(hand) and is_flush(hand) is True:
         return 3
-    elif is_flush(hand) is True:
+    if is_flush(hand) is True:
         return 2
-    elif is_straight(hand) is True:
+    if is_straight(hand) is True:
         return 1
     return 0
     # By now you should have seen the way a card is represented.
