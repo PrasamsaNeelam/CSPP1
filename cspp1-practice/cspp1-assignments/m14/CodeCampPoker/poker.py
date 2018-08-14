@@ -28,10 +28,12 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    if hand[0][1] == hand[1][1] and hand[1][1] == hand[2][1] and hand[2][1] == hand[3][1] and hand[3][1] == hand[4][1] and hand[4][1] == hand[5][1]:
-        return True
+    card = hand[0][1]
+    for i in hand:
+        if hand[i][1] == card
+            return True
     return False
-def hand_rank(hand):
+    def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
         return a value that max can use to identify the best hand.
