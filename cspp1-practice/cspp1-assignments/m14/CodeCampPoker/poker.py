@@ -15,7 +15,7 @@ def is_straight(hand):
     '''
     hand = sorted(hand)
     for i in hand:
-        if hand[i] - hand[i-1] == 1 and hand[i-1] - hand[i-2] == 1 and hand[i-2] - hand[i-3] == 1 and hand[i-3] - hand[i-4] == 1:
+        if hand[i]-hand[i-1] == 1 and hand[i-1]-hand[i-2] == 1 and hand[i-2]-hand[i-3] == 1 and hand[i-3]-hand[i-4] == 1:
             return True
     return False
 
@@ -30,7 +30,7 @@ def is_flush(hand):
     '''
     card = hand[0][1]
     for i in hand:
-        if hand[i][1] == card:
+        if i[1] == card:
             return True
     return False
 def hand_rank(hand):
