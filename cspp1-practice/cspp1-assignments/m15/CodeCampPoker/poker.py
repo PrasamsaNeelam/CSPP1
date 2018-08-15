@@ -42,17 +42,17 @@ def is_flush(hand):
     return True
 
 def is_four_of_a_kind(hand):
-	cnt = 0
-	card = hand[0][0]
-	print(card)
-	for i in hand:
-		if i[0] == card:
-			cnt += 1
-	    elif i[] == card:
-	        cnt = cnt + 1
-	if cnt == 4:
-		return True
-	return False
+    cnt = 0
+    card = hand[0][0]
+    print(card)
+    for i in hand:
+        if i[0] == card:
+            cnt += 1
+        elif i[] == card:
+            cnt = cnt + 1
+    if cnt == 4:
+        return True
+    return False
 
 def hand_rank(hand):
     '''
