@@ -52,6 +52,14 @@ def is_four_of_a_kind(hand):
             return True
     return False
 
+def is_three_of_a_kind(hand):
+    hand_list = [i for i, j in hand]
+    set_list = set(hand_list)
+    for i in set_list:
+        if hand_list.count(i) == 3:
+            return True
+    return False
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -68,6 +76,8 @@ def hand_rank(hand):
         return 6
     if is_four_of_a_kind(hand):
         return 5
+    if is_three_of_a_kind(hand):
+        return 4
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
