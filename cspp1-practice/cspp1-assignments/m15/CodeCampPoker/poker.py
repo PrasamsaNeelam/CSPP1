@@ -40,6 +40,17 @@ def is_flush(hand):
         if i[1] != card:
             return False
     return True
+
+def is_four_of_a_kind(hand):
+	if hand[0][0] == hand[1][0]:
+		card = hand[0][0]
+	for i in hand:
+		if i[0][0] == card:
+			cnt = cnt + 1
+	if cnt == 4:
+		return True
+	return False
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
