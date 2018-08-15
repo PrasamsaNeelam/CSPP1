@@ -61,11 +61,13 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 8
     if is_flush(hand):
-        return 2
+        return 7
     if is_straight(hand):
-        return 1
+        return 6
+    if is_four_of_a_kind(hand):
+        return 5
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
