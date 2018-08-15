@@ -42,6 +42,7 @@ def is_flush(hand):
     return True
 
 def is_four_of_a_kind(hand):
+    '''main function'''
     cnt = 0
     card = hand[0][0]
     card_one = hand[1][0]
