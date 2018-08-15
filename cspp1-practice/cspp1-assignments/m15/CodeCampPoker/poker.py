@@ -56,8 +56,10 @@ def is_four_of_a_kind(hand):
             cnt += 1
         elif i[0] == card_two:
             cnt += 1
-        elif i[0] == card_three
+        elif i[0] == card_three:
             cnt += 1
+        else:
+            cnt +=1
     if cnt == 4:
         return True
     return False
