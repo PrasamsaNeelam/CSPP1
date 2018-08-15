@@ -48,10 +48,8 @@ def is_four_of_a_kind(hand):
     if len(set_hand) != 2:
         return False
     for i in set_hand:
-        for j in hand:
-            if i == j:
-                if count(j) == 4:
-                    return True
+        if hand.count(i) == 4:
+            return True
     return False
 
 def hand_rank(hand):
