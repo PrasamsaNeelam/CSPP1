@@ -62,12 +62,22 @@ def is_three_of_a_kind(hand):
     return False
 
 def is_two_pair(hand):
+    '''returns the two pair cards'''
     hand_list = [i for i, j in hand]
     set_list = set(hand_list)
     two_pairs = [_ for _ in set_list if hand_list.count(_) == 2]
     if len(two_pairs) != 2:
         return False
     return True
+
+def is_one_pair(hand):
+    '''returns one pair cards'''
+    hand_list = [i for i, j in hand]
+    set_list = set(hand_list)
+    for i in set_list:
+        if hand_list.count(i) == 2:
+            return True
+    return False
 
 def hand_rank(hand):
     '''
@@ -89,6 +99,8 @@ def hand_rank(hand):
         return 4
     if is_two_pair(hand):
         return 3
+    if is_one_pair(hand):
+        return 2
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
