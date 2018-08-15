@@ -65,7 +65,7 @@ def is_two_pair(hand):
     hand_list = [i for i, j in hand]
     set_list = set(hand_list)
     two_pairs = [_ for _ in set_list if hand_list.count(_) == 2]
-    if len(two_pairs) != 3:
+    if len(two_pairs) != 2:
         return False
     return True
 
