@@ -79,6 +79,11 @@ def is_one_pair(hand):
             return True
     return False
 
+def is_full_house(hand):
+    if is_three_of_a_kind(hand) and is_one_pair(hand):
+        return True
+    return False
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -101,6 +106,8 @@ def hand_rank(hand):
         return 3
     if is_one_pair(hand):
         return 2
+    if is_full_house(hand):
+        return 1
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
