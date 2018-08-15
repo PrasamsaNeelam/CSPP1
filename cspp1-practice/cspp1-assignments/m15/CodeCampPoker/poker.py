@@ -43,12 +43,12 @@ def is_flush(hand):
 
 def is_four_of_a_kind(hand):
     '''checks for four cards having the same face value'''
-    hand = [i for i, j in hand]
-    set_hand = set(hand)
+    hand_list = [i for i, j in hand]
+    set_hand = set(hand_list)
     if len(set_hand) != 2:
         return False
     for i in set_hand:
-        if hand.count(i) == 4:
+        if hand_list.count(i) == 4:
             return True
     return False
 
