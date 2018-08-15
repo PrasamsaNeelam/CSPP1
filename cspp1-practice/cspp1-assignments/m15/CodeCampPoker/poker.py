@@ -42,10 +42,10 @@ def is_flush(hand):
     return True
 
 def is_four_of_a_kind(hand):
-	if hand[0][0] == hand[1][0]:
-		card = hand[0][0]
+	hand = sorted(hand)
+	card = hand[1][0]
 	for i in hand:
-		if i[0][0] == card:
+		if i[0] == card:
 			cnt = cnt + 1
 	if cnt == 4:
 		return True
