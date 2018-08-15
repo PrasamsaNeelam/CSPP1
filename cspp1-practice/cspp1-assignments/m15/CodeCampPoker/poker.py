@@ -42,26 +42,16 @@ def is_flush(hand):
     return True
 
 def is_four_of_a_kind(hand):
-    '''main function'''
-    cnt = 0
-    card = hand[0][0]
-    card_one = hand[1][0]
-    card_two = hand[2][0]
-    card_three = hand[3][0]
-    card_four = hand[4][0]
-    for i in hand:
-        if i[0] == card:
-            cnt += 1
-        elif i[0] == card_one:
-            cnt += 1
-        elif i[0] == card_two:
-            cnt += 1
-        elif i[0] == card_three:
-            cnt += 1
-        else:
-            cnt +=1
-    if cnt == 4:
-        return True
+    '''checks for four cards having the same face value'''
+    hand = [i for i,j in hand]
+    set_hand = set(hand)
+    if len(set_hand) != 2:
+        return False
+    for i in set_hand:
+        for j in hand:
+            if i == j:
+                if count(j) == 4:
+                    return True
     return False
 
 def hand_rank(hand):
