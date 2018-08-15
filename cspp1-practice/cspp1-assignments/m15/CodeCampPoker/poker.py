@@ -46,11 +46,18 @@ def is_four_of_a_kind(hand):
     cnt = 0
     card = hand[0][0]
     card_one = hand[1][0]
+    card_two = hand[2][0]
+    card_three = hand[3][0]
+    card_four = hand[4][0]
     for i in hand:
         if i[0] == card:
             cnt += 1
         elif i[0] == card_one:
-            cnt = cnt + 1
+            cnt += 1
+        elif i[0] == card_two:
+            cnt += 1
+        elif i[0] == card_three
+            cnt += 1
     if cnt == 4:
         return True
     return False
