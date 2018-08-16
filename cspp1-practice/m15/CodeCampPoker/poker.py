@@ -92,7 +92,7 @@ def is_high_card(hand):
     if len(set_list) != 5:
         return False
     max_value = max(hand_list)
-    print(max_value)
+    #print(max_value)
 
 def hand_rank(hand):
     '''
