@@ -85,6 +85,14 @@ def is_full_house(hand):
         return True
     return False
 
+def is_high_card(hand):
+	'''returns no card of a kind'''
+	hand_list = [i for i, j in hand]
+	set_list = set(hand_list)
+	if len(set_list) != 5:
+		return False
+	return True
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -94,21 +102,23 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     if is_straight(hand) and is_flush(hand):
-        return 8
+        return 9
     if is_flush(hand):
-        return 7
+        return 8
     if is_straight(hand):
-        return 6
+        return 7
     if is_four_of_a_kind(hand):
-        return 5
+        return 6
     if is_three_of_a_kind(hand):
-        return 4
+        return 5
     if is_two_pair(hand):
-        return 3
+        return 4
     if is_one_pair(hand):
-        return 2
+        return 3
     if is_full_house(hand):
-        return 1
+        return 2
+    if is_high_card(hand):
+    	return 1
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
