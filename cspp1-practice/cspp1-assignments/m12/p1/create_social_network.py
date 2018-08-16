@@ -32,7 +32,7 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    list_1 = []
+    '''list_1 = []
     a_dict = {}
     list_1.append(data)
     for i in list_1:
@@ -49,6 +49,12 @@ def create_social_network(data):
             a_dict[l2_in[0]][k] = str(a_dict[l2_in[0]][k])
 
     print(a_dict)
+    '''
+    a_dict = {}
+    data = data.splitlines()
+    print(data)
+    list_one = data.split(" follows ")
+
 
 
 
