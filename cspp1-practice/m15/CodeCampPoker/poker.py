@@ -87,12 +87,17 @@ def is_full_house(hand):
 
 def is_high_card(hand):
     '''returns no card of a kind'''
+    a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,
+              '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     hand_list = [i for i, j in hand]
     set_list = set(hand_list)
     if len(set_list) != 5:
         return False
-    max_value = max(hand_list)
-    #print(max_value)
+    for i in hand:
+        for j in a_dict:
+            if i == j:
+                list_one.append(a_dict(j))
+    return max(list_one)
 
 def hand_rank(hand):
     '''
