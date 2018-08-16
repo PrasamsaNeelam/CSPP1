@@ -87,19 +87,22 @@ def is_full_house(hand):
 
 def is_high_card(hand):
     '''returns no card of a kind'''
-    list_one = []
+    list_one = [] 
     a_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,
               '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     hand_list = [i for i, j in hand]
     set_list = set(hand_list)
     if len(set_list) != 5:
         return False
-    for i in hand:
+    for i in hand_list:
         for j in a_dict:
             if i == j:
                 list_one.append(a_dict[j])
-    print(list_one)
+    max_value = max(list_one)
+    list_two.append(max_value)
+    return(max(list_two))
 
+    
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -166,6 +169,7 @@ def poker(hands):
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
+    list_two = []
     # iterate through the test cases to set up hands list
     HANDS = []
     for x in range(COUNT):
