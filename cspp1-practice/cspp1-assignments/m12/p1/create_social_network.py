@@ -52,8 +52,8 @@ def create_social_network(data):
     '''
     a_dict = {}
     data = data.splitlines()
-    print(data)
     list_one = data.split(" follows ")
+    print(list_one)
 
 
 
