@@ -97,7 +97,7 @@ def is_high_card(hand):
     for i in hand:
         for j in a_dict:
             if i == j:
-                list_one.append(max((a_dict[j])))
+                list_one.append(a_dict[j])
     print(list_one)
 
 def hand_rank(hand):
