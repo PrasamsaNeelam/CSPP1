@@ -13,10 +13,10 @@ def is_flush(hand):
         values_set.append(i[1])
     return len(set(values_set)) == 1
 
-def is_kind(ranks,n):
+def is_kind(ranks,n_value):
     ''' Returning the rank and checking of the repetition and sending the rank''' 
     for i in ranks:
-        if ranks.count(i) == n:
+        if ranks.count(i) == n_value:
            return i
 def is_two_pair(ranks):
     '''Checks for two-pair cards '''
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
     # iterate through the test cases to set up hands list
-    list_1 = []
+    list_one = []
     HANDS = []
     for x in range(COUNT):
         line = input()
