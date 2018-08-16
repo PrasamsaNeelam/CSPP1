@@ -89,8 +89,10 @@ def is_high_card(hand):
     '''returns no card of a kind'''
     hand_list = [i for i, j in hand]
     set_list = set(hand_list)
-    if len(set_list) == 5:
-        return True
+    if len(set_list) != 5:
+        return False
+    max_value = max(hand_list)
+    print(max_value)
 
 def hand_rank(hand):
     '''
