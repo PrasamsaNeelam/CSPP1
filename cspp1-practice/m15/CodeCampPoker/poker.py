@@ -86,12 +86,11 @@ def is_full_house(hand):
     return False
 
 def is_high_card(hand):
-	'''returns no card of a kind'''
-	hand_list = [i for i, j in hand]
-	set_list = set(hand_list)
-	if len(set_list) != 5:
-		return False
-	return True
+    '''returns no card of a kind'''
+    hand_list = [i for i, j in hand]
+    set_list = set(hand_list)
+    if len(set_list) == 5:
+        return True
 
 def hand_rank(hand):
     '''
@@ -118,7 +117,7 @@ def hand_rank(hand):
     if is_full_house(hand):
         return 2
     if is_high_card(hand):
-    	return 1
+        return 1
     return 0
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
