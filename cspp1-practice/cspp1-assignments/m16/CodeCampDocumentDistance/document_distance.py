@@ -10,6 +10,8 @@ def similarity(dict1, dict2):
     list_one = []
     list_two = []
     a_numerator = 0
+    den_one = 0
+    den_two = 0
     a_denominator = 0
     compute_final = 0
     lower_case_one = dict1.lower()
