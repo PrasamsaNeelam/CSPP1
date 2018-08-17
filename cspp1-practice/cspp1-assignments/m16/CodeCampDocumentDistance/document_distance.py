@@ -26,22 +26,16 @@ def similarity(dict1, dict2):
         for j in list_two:
             if i == j:
                 list_two.remove(j)
-    print(list_one)
-    print(list_two)
 
 def freq_count(list_one, list_two):
     a_dict = {}
     for i in list_one:
         for j in list_two:
-            if i == j:
-                if i in a_dict:
-                    a_dict[i].append(j)
-                else:
-                    a_dict[i] = [j] 
-
-
-
-        
+            if i not in a_dict:
+                a_dict.append(i)
+            else:
+                a_dict[i] += 1 
+    print(a_dict)
 
 
 def load_stopwords(filename):
