@@ -6,7 +6,6 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    common_dictionary = {}
     list_one = []
     list_two = []
     lower_case_one = dict1.lower()
@@ -27,8 +26,10 @@ def similarity(dict1, dict2):
         for j in list_two:
             if i == j:
                 list_two.remove(j)
-    a = freq_count(list_one, list_two)
-    
+    a_dict = freq_count(list_one, list_two)
+    a_numerator = sum(common_dictionary[i[0]] * common_dictionary[i[1]])
+    print(a_numerator)
+
     
 def freq_count(list_one, list_two):
     '''Returns the frequency count of two list values'''
@@ -53,7 +54,7 @@ def freq_count(list_one, list_two):
     for i in dict_two:
         if i in common_dictionary:
             common_dictionary[i] = [0, dict_two[i]]
-    print(common_dictionary)
+    return common_dictionary
 
 def load_stopwords(filename):
     '''
