@@ -16,7 +16,8 @@ def similarity(dict1, dict2):
         list_one.append(_.strip('.,?'))
     for _ in word_listt:
         list_two.append(_.strip('.,?'))
-    print(load_stopwords(word_list))
+    load_stopwords(stopwords)
+
         
 
 
