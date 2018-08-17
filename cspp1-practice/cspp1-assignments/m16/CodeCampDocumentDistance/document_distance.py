@@ -14,14 +14,16 @@ def similarity(dict1, dict2):
     word_listt = lower_case_two.split(" ")
     for _ in word_list:
         list_one.append(_.strip('.,?'))
+    if isalpha(list_one):
+        print(True)
     for _ in word_listt:
         list_two.append(_.strip('.,?'))
     stop_words = load_stopwords("stopwords.txt")
-    for i in stopwords:
+    stopwords_list = stop_words.keys()
+    for i in stopwords_list:
         for j in list_one:
             if i == j:
                 list_one.remove(j)
-    print(list_one)
     for i in stopwords:
         for j in list_two:
             if i == j:
