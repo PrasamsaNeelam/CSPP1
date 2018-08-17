@@ -6,12 +6,13 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
+    list_one = []
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
     word_list = lower_case_one.split(" ")
     word_listt = lower_case_two.split(" ")
     for i in word_list:
-        print(word_list.strip('.,?'))
+        print(list_one.append(word_list.strip('.,?')))
         
     
    
