@@ -22,7 +22,7 @@ def similarity(dict1, dict2):
         for j in list_one:
             if i == j:
                 list_one.remove(j)
-    for i in stopwords:
+    for i in stopwords_list:
         for j in list_two:
             if i == j:
                 list_two.remove(j)
