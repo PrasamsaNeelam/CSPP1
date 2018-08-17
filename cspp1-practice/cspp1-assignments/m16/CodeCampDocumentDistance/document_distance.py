@@ -8,7 +8,7 @@ def similarity(dict1, dict2):
     '''
     list_one = []
     list_two = []
-    file = []
+    file = ""
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
     word_list = lower_case_one.split(" ")
