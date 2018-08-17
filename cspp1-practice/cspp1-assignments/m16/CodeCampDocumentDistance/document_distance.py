@@ -10,7 +10,11 @@ def similarity(dict1, dict2):
     lower_case_two = dict2.lower()
     word_list_one = lower_case_one.split(" ")
     word_list_two = lower_case_two.split(" ")
-    print(regex.sub('', word_list_one))
+    for i in word_list_one:
+    	for j in i:
+    		if j in (',''.''?'):
+    			del j
+    print(word_list_one)
    
 
 
