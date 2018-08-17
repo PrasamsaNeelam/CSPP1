@@ -6,9 +6,13 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    lower_case = dict1.lower()
-    word_list = lower_case.split(" ")
-    print(word_list)
+    lower_case_one = dict1.lower()
+    lower_case_two = dict2.lower()
+    word_list_one = lower_case_one.split(" ")
+    word_list_two = lower_case_two.split(" ")
+    strip_line_one = word_list_one.strip()
+    strip_line_two = word_list_two.strip()
+    print(strip_line_one)
 
 
 def load_stopwords(filename):
