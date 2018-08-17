@@ -32,7 +32,8 @@ def similarity(dict1, dict2):
     for i in b:
         if i in list_two:
             list_two.remove(i)
-
+    print(list_one)
+    print(list_two)
     a_dict = freq_count(list_one, list_two)
     print(a_dict)
     for i in a_dict:
