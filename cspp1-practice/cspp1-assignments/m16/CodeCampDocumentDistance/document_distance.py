@@ -34,6 +34,7 @@ def similarity(dict1, dict2):
             list_two.remove(i)
 
     a_dict = freq_count(list_one, list_two)
+    print(a_dict)
     for i in a_dict:
         a_numerator += a_dict[i][0] * a_dict[i][1]
         den_one += a_dict[i][0]**2
