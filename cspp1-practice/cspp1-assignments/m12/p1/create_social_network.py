@@ -55,7 +55,7 @@ def create_social_network(data):
     print(data)
     for i in data:
         list_one = i.split(" follows ")
-        if list_one[0] endswith("!"):
+        if list_one[0].endswith("!"):
             return a_dict
         list_two = list_one[1].split(",")
         if list_one[0] in a_dict:
