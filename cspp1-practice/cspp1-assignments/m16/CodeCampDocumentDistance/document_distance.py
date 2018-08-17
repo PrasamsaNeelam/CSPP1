@@ -27,7 +27,7 @@ def similarity(dict1, dict2):
             if i == j:
                 list_two.remove(j)
     a_dict = freq_count(list_one, list_two)
-    a_numerator = sum(common_dictionary[i[0]] * common_dictionary[i[1]])
+    a_numerator = sum(a_dict[i[0]] * a_dict[i[1]])
     print(a_numerator)
 
     
