@@ -38,7 +38,7 @@ def freq_count(list_one, list_two):
         else:
             dict_one[i] = 1
     for i in list_two:
-        if i not in dict_two:
+        if i in dict_two:
             dict_two[i] += 1
         else:
             dict_two[i] = 1
