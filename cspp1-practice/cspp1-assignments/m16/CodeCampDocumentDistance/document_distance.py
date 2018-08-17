@@ -18,7 +18,11 @@ def similarity(dict1, dict2):
         list_two.append(_.strip('.,?'))
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
-    print(stopwords_list) 
+    for i in stopwords_list:
+        for j in word_list:
+            if i == j:
+                word_list.remove(j)
+    print(word_list)
 
      
 
