@@ -59,7 +59,7 @@ def freq_count(list_one, list_two):
             dict_two[i] += 1
         else:
             dict_two[i] = 1
-    print(dict_one)
+    print(dict_two)
     for i in dict_one:
         if i in dict_two:
             common_dictionary[i] = [dict_one[i], dict_two[i]]
