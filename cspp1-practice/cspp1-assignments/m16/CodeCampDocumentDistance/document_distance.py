@@ -24,14 +24,15 @@ def similarity(dict1, dict2):
         list_two.append(_.strip(".,'?"))
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
-    for i in stopwords_list:
-        for j in list_one:
-            if i == j:
-                list_one.remove(j)
-    for i in stopwords_list:
-        for j in list_two:
-            if i == j:
-                list_two.remove(j)
+    a = list_one[:]
+    for i in a:
+        if i in word_list:
+            list_one.remove(i)
+    b = list_two[:]
+    for i in b:
+        if i in list_two:
+            list_two.remove(i)
+
     a_dict = freq_count(list_one, list_two)
     for i in a_dict:
         a_numerator += a_dict[i][0] * a_dict[i][1]
