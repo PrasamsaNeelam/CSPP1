@@ -26,16 +26,16 @@ def similarity(dict1, dict2):
     stopwords_list = stop_words.keys()
     a = list_one[:]
     for i in a:
-        if i in word_list:
+        if i in stopwords_list:
             list_one.remove(i)
     b = list_two[:]
     for i in b:
-        if i in list_two:
+        if i in stopwords_list:
             list_two.remove(i)
-    print(list_one)
-    print(list_two)
+    # print(list_one)
+    # print(list_two)
     a_dict = freq_count(list_one, list_two)
-    print(a_dict)
+    #print(a_dict)
     for i in a_dict:
         a_numerator += a_dict[i][0] * a_dict[i][1]
         den_one += a_dict[i][0]**2
