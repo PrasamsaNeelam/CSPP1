@@ -38,9 +38,9 @@ def similarity(dict1, dict2):
         den_one += a_dict[i][0]**2
         den_two += a_dict[i][1]**2
         a_denominator = math.sqrt(den_one) * math.sqrt(den_two)
-    print(a_dict)
-    print(den_one,den_two)
-    print(a_denominator)
+    # print(a_dict)
+    # print(den_one,den_two)
+    # print(a_denominator)
     compute_final = a_numerator/a_denominator
     return compute_final
 
@@ -59,6 +59,7 @@ def freq_count(list_one, list_two):
             dict_two[i] += 1
         else:
             dict_two[i] = 1
+    print(dict_one)
     for i in dict_one:
         if i in dict_two:
             common_dictionary[i] = [dict_one[i], dict_two[i]]
