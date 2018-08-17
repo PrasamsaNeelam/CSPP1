@@ -13,9 +13,9 @@ def similarity(dict1, dict2):
     word_list = lower_case_one.split(" ")
     word_listt = lower_case_two.split(" ")
     for _ in word_list:
-        list_one.append(_.strip(".,?'"))
+        list_one.append(_.strip(".,'?"))
     for _ in word_listt:
-        list_two.append(_.strip(".,?'"))
+        list_two.append(_.strip(".,'?"))
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
     for i in stopwords_list:
