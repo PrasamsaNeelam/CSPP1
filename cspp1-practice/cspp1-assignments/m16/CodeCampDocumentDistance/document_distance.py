@@ -13,11 +13,9 @@ def similarity(dict1, dict2):
     word_list = lower_case_one.split(" ")
     word_listt = lower_case_two.split(" ")
     for _ in word_list:
-        list_one.append(_.strip('.,?'))
-    if isalpha(list_one):
-        print(True)
+        list_one.append(_.strip('.,?\''))
     for _ in word_listt:
-        list_two.append(_.strip('.,?'))
+        list_two.append(_.strip('.,?\''))
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
     for i in stopwords_list:
@@ -28,8 +26,20 @@ def similarity(dict1, dict2):
         for j in list_two:
             if i == j:
                 list_two.remove(j)
+    print(list_one)
+    print(list_two)
 
-     
+def freq_count(list_one, list_two):
+    a_dict = {}
+    for i in list_one:
+        for j in list_two:
+            if i == j:
+                if i in a_dict:
+                    a_dict[i].append(j)
+                else:
+                    a_dict[i] = [j] 
+
+
 
         
 
