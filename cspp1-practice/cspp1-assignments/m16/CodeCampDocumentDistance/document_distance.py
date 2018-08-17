@@ -14,14 +14,14 @@ def similarity(dict1, dict2):
     den_two = 0
     a_denominator = 0
     compute_final = 0
-    lower_case_one = dict1.lower()
-    lower_case_two = dict2.lower()
+    dict1 = dict1.lower()
+    dict2 = dict2.lower()
     str_one = ''
     str_two = ''
-    for i in lower_case_one:
+    for i in dict1:
         if 'a' <= i <='z' or i == ' ':
             str_one += i
-    for i in lower_case_two:
+    for i in dict2:
         if 'a' <= i <='z' or i == ' ':
             str_two += i
     list_one = str_one.split()
