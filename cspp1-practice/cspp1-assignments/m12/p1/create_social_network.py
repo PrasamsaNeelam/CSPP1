@@ -52,11 +52,17 @@ def create_social_network(data):
     '''
     a_dict = {}
     data = data.splitlines()
-    print(data)
-    # for i in data:
-        # list_one = data.split(" follows ")
-    # #print(list_one)
-
+    for i in data:
+        list_one = i.split(" follows ")
+        list_two = list_one[1].split(",")
+        if list_one[0] in a_dict:
+        	a_dict[list_one[0]].append(list_two)
+        else:
+        	a_dict[list_one[0]] = list_two
+    return a_dict
+    
+    
+    
 
 
 
