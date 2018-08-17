@@ -12,17 +12,15 @@ def similarity(dict1, dict2):
     a_numerator = 0
     den_one = 0
     den_two = 0
-    a_denominator = 0
-    compute_final = 0
     dict1 = dict1.lower()
     dict2 = dict2.lower()
     str_one = ''
     str_two = ''
     for i in dict1:
-        if 'a' <= i <='z' or i == ' ':
+        if 'a' <= i <= 'z' or i == ' ':
             str_one += i
     for i in dict2:
-        if 'a' <= i <='z' or i == ' ':
+        if 'a' <= i <= 'z' or i == ' ':
             str_two += i
     list_one = str_one.split()
     list_two = str_two.split()
