@@ -32,8 +32,8 @@ def similarity(dict1, dict2):
     for i in a_clone:
         if i in stopwords_list:
             list_one.remove(i)
-    b_clone = list_two[:]
-    for i in b_clone:
+    a_clone = list_two[:]
+    for i in a_clone:
         if i in stopwords_list:
             list_two.remove(i)
     # print(list_one)
@@ -44,12 +44,10 @@ def similarity(dict1, dict2):
         a_numerator += a_dict[i][0] * a_dict[i][1]
         den_one += a_dict[i][0]**2
         den_two += a_dict[i][1]**2
-        a_denominator = math.sqrt(den_one) * math.sqrt(den_two)
     # print(a_dict)
     # print(den_one,den_two)
     # print(a_denominator)
-    compute_final = a_numerator/a_denominator
-    return compute_final
+    return a_numerator/(math.sqrt(den_one) * math.sqrt(den_two))
 
 def freq_count(list_one, list_two):
     '''Returns the frequency count of two list values'''
