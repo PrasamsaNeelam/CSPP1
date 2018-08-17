@@ -9,6 +9,9 @@ def similarity(dict1, dict2):
     import math
     list_one = []
     list_two = []
+    a_numerator = 0
+    a_denominator = 0
+    compute_final = 0
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
     word_list = lower_case_one.split(" ")
@@ -28,14 +31,14 @@ def similarity(dict1, dict2):
             if i == j:
                 list_two.remove(j)
     a_dict = freq_count(list_one, list_two)
-    a_numerator = sum(a_dict[i[0]] * a_dict[i[1]])
-    den_one = math.sqrt(sum(a_dict[i[0]]**2))
-    den_two = math.sqrt(sum(a_dict[i[1]]**2))
-    a_denominator = den_one * den_two
+    for i in a_dict:
+        a_numerator += a_dict[i[0]] * a_dict[i[1]]
+        den_one += a_dict[i[0]]**2
+        den_two += a_dict[i[1]]**2
+        a_denominator = math.sqrt(den_one) * math.sqrt(den_two)
     compute_final = a_numerator/a_denominator
     return compute_final
 
-    
 def freq_count(list_one, list_two):
     '''Returns the frequency count of two list values'''
     dict_one = {}
