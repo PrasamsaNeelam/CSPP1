@@ -16,12 +16,17 @@ def similarity(dict1, dict2):
     compute_final = 0
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
-    word_list = lower_case_one.split(" ")
+    word_list = ''
+    word_listt = ''
     word_listt = lower_case_two.split(" ")
-    for _ in word_list:
-        list_one.append(_.strip(".,'?"))
-    for _ in word_listt:
-        list_two.append(_.strip(".,'?"))
+    for _ in lower_case_one:
+        if 'a' <= i <='z' or i == ' ':
+            lower_case_one += i
+    for _ in lower_case_two:
+        if 'a' <= i <='z' or i == ' ':
+            lower_case_two += i
+    list_one = word_list.split()
+    list_two = word_listt.split()
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
     a = list_one[:]
