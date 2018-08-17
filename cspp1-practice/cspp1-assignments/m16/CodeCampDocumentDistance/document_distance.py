@@ -6,6 +6,7 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
+    import math
     list_one = []
     list_two = []
     lower_case_one = dict1.lower()
@@ -28,7 +29,11 @@ def similarity(dict1, dict2):
                 list_two.remove(j)
     a_dict = freq_count(list_one, list_two)
     a_numerator = sum(a_dict[i[0]] * a_dict[i[1]])
-    print(a_numerator)
+    den_one = math.sqrt(sum(a_dict[i[0]]**2))
+    den_two = math.sqrt(sum(a_dict[i[1]]**2))
+    a_denominator = den_one * den_two
+    compute_final = a_numerator/a_denominator
+    return compute_final
 
     
 def freq_count(list_one, list_two):
@@ -38,7 +43,7 @@ def freq_count(list_one, list_two):
     common_dictionary = {}
     for i in list_one:
         if i in dict_one:
-            dict_one[i] +=1
+            dict_one[i] += 1
         else:
             dict_one[i] = 1
     for i in list_two:
