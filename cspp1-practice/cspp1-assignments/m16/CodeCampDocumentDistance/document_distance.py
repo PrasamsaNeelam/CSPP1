@@ -28,17 +28,13 @@ def similarity(dict1, dict2):
             if i == j:
                 list_two.remove(j)
     a_dict = freq_count(list_one, list_two)
-    for i in dict_one:
-        for j in dict_two:
-            if i == j:
-                common_dictionary[i] = [dict_one[i], dict_two[i]]
-            else:
-                common_dictionary[i] = [dict_one[i], 0]
+    
     
 def freq_count(list_one, list_two):
     '''Returns the frequency count of two list values'''
     dict_one = {}
     dict_two = {}
+    a_dict = {}
     for i in list_one:
         if i in dict_one:
             dict_one[i] +=1
@@ -49,6 +45,15 @@ def freq_count(list_one, list_two):
             dict_two[i] += 1
         else:
             dict_two[i] = 1
+    for i in dict_one:
+        if i in dict_two:
+            common_dictionary[i] = [dict_one[i], dict_two[i]]
+        else:
+            common_dictionary[i] = [dict_one[i], 0]
+    for i in dict_two:
+        if i in a_dict:
+            common_dictionary[i] = [0, dict_two[i]]
+    print(a_dict)
 
 def load_stopwords(filename):
     '''
