@@ -38,6 +38,7 @@ def similarity(dict1, dict2):
         den_one += a_dict[i][0]**2
         den_two += a_dict[i][1]**2
         a_denominator = math.sqrt(den_one) * math.sqrt(den_two)
+    print(den_one,den_two)
     print(a_denominator)
     compute_final = a_numerator/a_denominator
     return compute_final
