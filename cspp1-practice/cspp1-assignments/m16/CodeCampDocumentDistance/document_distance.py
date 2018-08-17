@@ -28,12 +28,12 @@ def similarity(dict1, dict2):
     list_two = str_two.split()
     stop_words = load_stopwords("stopwords.txt")
     stopwords_list = stop_words.keys()
-    a = list_one[:]
-    for i in a:
+    a_clone = list_one[:]
+    for i in a_clone:
         if i in stopwords_list:
             list_one.remove(i)
-    b = list_two[:]
-    for i in b:
+    b_clone = list_two[:]
+    for i in b_clone:
         if i in stopwords_list:
             list_two.remove(i)
     # print(list_one)
