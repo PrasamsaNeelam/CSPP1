@@ -8,7 +8,10 @@ def similarity(dict1, dict2):
     '''
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
-    print(lower_case_one.strip())
+    word_list = lower_case_one.split(" ")
+    word_listt = lower_case_two.split(" ")
+    for i in word_list:
+        print(word_list.strip('.,?'))
         
     
    
