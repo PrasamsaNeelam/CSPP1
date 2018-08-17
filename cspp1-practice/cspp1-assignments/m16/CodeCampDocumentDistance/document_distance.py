@@ -8,7 +8,6 @@ def similarity(dict1, dict2):
     '''
     list_one = []
     list_two = []
-    file = ""
     lower_case_one = dict1.lower()
     lower_case_two = dict2.lower()
     word_list = lower_case_one.split(" ")
@@ -17,11 +16,8 @@ def similarity(dict1, dict2):
         list_one.append(_.strip('.,?'))
     for _ in word_listt:
         list_two.append(_.strip('.,?'))
-    for i in load_stopwords(file):
-        for j in word_list:
-            if stopwords[i] == j:
-                del j 
-   
+    print(load_stopwords(word_list))
+        
 
 
 def load_stopwords(filename):
