@@ -12,7 +12,7 @@ def similarity(dict1, dict2):
     word_list_two = lower_case_two.split(" ")
     for i in word_list_one:
     	for j in i:
-    		if j in (',''.''?'):
+    		if j in (',' or '.' or '?'):
     			del j
     print(word_list_one)
    
