@@ -19,10 +19,10 @@ def similarity(dict1, dict2):
     word_list = ''
     word_listt = ''
     word_listt = lower_case_two.split(" ")
-    for _ in lower_case_one:
+    for i in lower_case_one:
         if 'a' <= i <='z' or i == ' ':
             lower_case_one += i
-    for _ in lower_case_two:
+    for i in lower_case_two:
         if 'a' <= i <='z' or i == ' ':
             lower_case_two += i
     list_one = word_list.split()
