@@ -12,8 +12,8 @@ def similarity(dict1, dict2):
     word_list = lower_case_one.split(" ")
     word_listt = lower_case_two.split(" ")
     for i in word_list:
-        print(list_one.append(word_list.strip('.,?')))
-        
+        list_one.append(i.strip('.,?'))
+    print(list_one)
     
    
 
