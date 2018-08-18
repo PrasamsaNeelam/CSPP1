@@ -64,7 +64,7 @@ def build_search_index(docs):
     # iterate through all the docs
     for i in range(length_docs):
         docs[i] = word_list(docs[i])
-        docs[i] = collections.counter(docs[i])
+        docs[i] = collections.Counter(docs[i])
     if i in range:
         for j in docs[i]:
             if j in a_dict:
