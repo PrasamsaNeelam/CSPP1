@@ -67,7 +67,7 @@ def build_search_index(docs):
     for i in range(length_docs):
         for j in docs[i]:
             if j in a_dict:
-                a_dict[j].append(i, docs[i][j])
+                a_dict[j].append((i, docs[i][j]))
             else:
                 a_dict[j] = [(i, docs[i][j])]
     return a_dict
