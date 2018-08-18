@@ -39,7 +39,11 @@ def search(search_index, query):
     '''
     query = query.split()
     query_one = query.lower()
-    print(query_one)
+    for i in query_one:
+        if i in search_index:
+            print(search_index[i].values())
+
+
 
 
 
@@ -51,9 +55,7 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    for i in queries:
-        if i in search_index:
-            search_index.
+    
 
 def main():
     '''
