@@ -27,7 +27,7 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open("stopwords.txt", 'r') as f_stopwords:
+    with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords[line.strip()] = 0
     return stopwords
@@ -39,11 +39,18 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    import re
-    data = text.lower()
-    data.split()
-    re.sub('[^a-z]', '', data)
-    print(data)
+    #import re
+    list_one = []
+    data = text.split()
+    stop_words = load_stopwords("stopwords.txt")
+    for i in data:
+        i = i.lower()
+        i = ''.join(e for e in i if e.isalpha())
+        if i not in stop_words:
+            list_one.append(i)
+    return list_one
+
+    # re.sub('[^a-z]', '', data)
 
 def build_search_index(docs):
     '''
