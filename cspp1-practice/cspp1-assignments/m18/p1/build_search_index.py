@@ -55,7 +55,7 @@ def build_search_index(docs):
     length_docs = len(docs)
 
     # iterate through all the docs
-    for i in range(len(docs):
+    for i in range(length_docs):
         docs[i] = word_list(docs[i])
         docs[i] = collection.counter(docs[i])
     if i in range:
