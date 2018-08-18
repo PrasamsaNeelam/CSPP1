@@ -41,13 +41,9 @@ def search(search_index, query):
     query_one = query.lower()
     for i in query_one:
         if i in search_index:
-            values = search_index[i].values()
-    return search_index[i], set(values)
+            return search_index[i].values()
 
 
-
-
- 
 
 def process_queries(search_index, queries):
     '''
