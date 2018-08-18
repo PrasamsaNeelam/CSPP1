@@ -70,7 +70,7 @@ def build_search_index(docs):
             if j in a_dict:
                 a_dict[j].append(i, docs[i][j])
     else:
-        a_dict[j] = (i, docs[i][j])
+        a_dict[j] = [(i, docs[i][j])]
         # if keys in i:
         #     if keys not in a_dict:
         #         a_dict[keys] = [(i,)]
