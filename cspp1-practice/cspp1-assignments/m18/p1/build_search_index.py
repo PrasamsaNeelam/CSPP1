@@ -60,7 +60,6 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     a_dict = {}
     length_docs = len(docs)
-
     # iterate through all the docs
     for i in range(length_docs):
         docs[i] = word_list(docs[i])
@@ -71,6 +70,7 @@ def build_search_index(docs):
                 a_dict[j].append(i, docs[i][j])
     else:
         a_dict[j] = [(i, docs[i][j])]
+    return a_dict
         # if keys in i:
         #     if keys not in a_dict:
         #         a_dict[keys] = [(i,)]
