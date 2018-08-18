@@ -42,7 +42,7 @@ def word_list(text):
     import re
     data = text.lower()
     data.split()
-    re.sub('[^a-z]','',data)
+    re.sub('[^a-z]', '', data)
     print(data)
 
 def build_search_index(docs):
@@ -53,17 +53,18 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     a_dict = {}
     length_docs = len(docs)
+    count = []
 
     # iterate through all the docs
     for i in range(length_docs):
         docs[i] = word_list(docs[i])
-        docs[i] = collection.counter(docs[i])
+        docs[i] = count.counter(docs[i])
     if i in range:
         for j in docs[i]:
             if j in a_dict:
                 a_dict[j].append(i, docs[i][j])
     else:
-        a_dict[j] = (i,docs[i][j])
+        a_dict[j] = (i, docs[i][j])
         # if keys in i:
         #     if keys not in a_dict:
         #         a_dict[keys] = [(i,)]
