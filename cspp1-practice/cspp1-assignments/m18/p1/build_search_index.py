@@ -20,7 +20,6 @@
         .
     }
 '''
-import collections
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -56,7 +55,7 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-
+    import collections
     # initialize a search index (an empty dictionary)
     a_dict = {}
     length_docs = len(docs)
