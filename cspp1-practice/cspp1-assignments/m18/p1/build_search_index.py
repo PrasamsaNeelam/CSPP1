@@ -45,7 +45,7 @@ def word_list(text):
     stop_words = load_stopwords("stopwords.txt")
     for i in data:
         i = i.lower()
-        i = ''.join(e for e in i if e.isalpha())
+        i = ''.join(_ for _ in i if _.isalpha())
         if i not in stop_words:
             list_one.append(i)
     return list_one
@@ -68,8 +68,8 @@ def build_search_index(docs):
         for j in docs[i]:
             if j in a_dict:
                 a_dict[j].append(i, docs[i][j])
-    else:
-        a_dict[j] = [(i, docs[i][j])]
+            else:
+                a_dict[j] = [(i, docs[i][j])]
     return a_dict
         # if keys in i:
         #     if keys not in a_dict:
@@ -85,7 +85,6 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    
 
 # helper function to print the search index
 # use this to verify how the search index looks
