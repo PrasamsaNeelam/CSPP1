@@ -1,4 +1,7 @@
-
+'''
+Author: Prasamsa
+Date: 22 august 2018
+'''
 import string
 class Cipher:
     def __init__(self, value):
