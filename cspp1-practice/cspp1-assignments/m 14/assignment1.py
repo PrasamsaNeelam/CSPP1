@@ -4,6 +4,7 @@ Date: 22 august 2018
 '''
 import string
 class Cipher:
+    '''created a class named Cipher'''
     def __init__(self, value):
         self.value = value
 
