@@ -9,11 +9,12 @@ class Cipher:
 
     def __len__(self):
         count = 0
-        for i in self.value:
+        for _ in self.value:
             count += 1
         return count
 
     def shift(self, shift_number):
+    	'''shifts the number'''
         small_alphabet = ""
         upper_alphabet = ""
         small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
