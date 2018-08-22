@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -71,6 +71,7 @@ class Message(object):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words
         '''
+        self.shift_dict = {}
         self.message_text = text
         self.valid_words = load_words("words.txt")
 
@@ -163,6 +164,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
+        super(PlaintextMessage, self).__init__(text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
@@ -228,9 +230,13 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
+        super(CiphertextMessage, self).__init__(text)
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
         self.max_valid_words = 0
+        self.encrypting_dict = {}
+        self.message_text_encrypted = ""
+        self.decrypted_message = ()
 
     def decrypt_message(self):
         '''
