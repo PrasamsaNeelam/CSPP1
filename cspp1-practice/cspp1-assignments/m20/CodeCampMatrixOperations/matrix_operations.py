@@ -43,7 +43,7 @@ def add_matrix(matrix_value1, matrix_value2):
             matrix_result.append(li_st)
     return matrix_result
 
-def read_matrix(m):
+def read_matrix():
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -51,28 +51,35 @@ def read_matrix(m):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-
-def main():
-    # read matrix 1
+    
     matrix_value1 = []
     m, n = input().split(",")
     m = int(m)
     for i in range(0, m):
         matrix_value1.append(list(map(int,input().split())))
-    #print(matrix_value1)
+    
 
+    flag = True
+    for i in matrix_value1:
+        count = 0
+        for _ in i:
+            count += 1
+        if count != matrix_value2[0]:
+            flag = False
+    return matrix_value1, flag
+
+def main():
+    # read matrix 1
+    (matrix_value1, flag1) = read_matrix()
     # read matrix 2
-    matrix_value2 = []
-    m, n = input().split(",")
-    m = int(m)
-    for i in range(0, m):
-        matrix_value2.append(list(map(int,input().split())))
-    #print(matrix_value2)
-
+    (matrix_value2, flag2) = read_matrix()
     # add matrix 1 and matrix 2
-    print(add_matrix(matrix_value1, matrix_value2))
+    if flag1 and flag2:
+        print(add_matrix(matrix_value1, matrix_value2))
     # multiply matrix 1 and matrix 2
-    print(mult_matrix(matrix_value1, matrix_value2))
+        print(mult_matrix(matrix_value1, matrix_value2))
+    else:
+        print("Error: Invalid input for the matrix")
 
 if __name__ == '__main__':
     main()
