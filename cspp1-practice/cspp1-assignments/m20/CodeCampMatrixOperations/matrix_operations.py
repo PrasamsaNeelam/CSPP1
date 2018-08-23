@@ -1,3 +1,7 @@
+'''
+Author: Prasamsa
+Date: 23 august 2018
+'''
 def mult_matrix(matrix_value1, matrix_value2):
     '''
         check if the matrix_value1 columns = matrix_value2 rows
@@ -37,7 +41,7 @@ def add_matrix(matrix_value1, matrix_value2):
             matrix_result.append(li_st)
         return matrix_result
     print("Error: Matrix shapes invalid for addition")
-    return None 
+    return None
 
 def read_matrix():
     '''
