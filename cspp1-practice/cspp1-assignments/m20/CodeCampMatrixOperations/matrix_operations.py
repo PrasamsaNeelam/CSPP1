@@ -16,12 +16,9 @@ def mult_matrix(matrix_value1, matrix_value2):
                         sum_value += (matrix_value1[i][k]*matrix_value2[k][j])
                     li_st.append(sum_value)
                 matrix_result.append(li_st)
-        return matrix_result
-    
+        return matrix_result    
     print("Error: Matrix shapes invalid for mult")
-    return None
-    
-        
+    return None   
 
 def add_matrix(matrix_value1, matrix_value2):
     '''
@@ -32,16 +29,16 @@ def add_matrix(matrix_value1, matrix_value2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     matrix_result = []
-    if len(matrix_value1) != len(matrix_value2):
-        print("Error: Matrix shapes invalid for addition")
-        return None
-    else:
-        for i in range(len(matrix_value1)):
+    if len(matrix_value1) == len(matrix_value2):
+    	for i in range(len(matrix_value1)):
             li_st = []
             for j in range(len(matrix_value1[i])):
                 li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
             matrix_result.append(li_st)
         return matrix_result
+    print("Error: Matrix shapes invalid for addition")
+    return None
+        
 
 def read_matrix():
     '''
