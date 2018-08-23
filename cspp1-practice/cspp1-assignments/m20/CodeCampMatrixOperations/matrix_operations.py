@@ -7,19 +7,21 @@ def mult_matrix(matrix_value1, matrix_value2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     matrix_result = []
-    if len(matrix_value1[0]) != len(matrix_value2):
-        print("Error: Matrix shapes invalid for mult")
-        return None
-    else:
+    if len(matrix_value1[0]) == len(matrix_value2):
         for i in range(len(matrix_value1)):
-            li_st = []
-            for j in range(len(matrix_value1)):
-                sum_value = 0
-                for k in range(len(matrix_value2)):
-                    sum_value += (matrix_value1[i][k]*matrix_value2[k][j])
-                li_st.append(sum_value)
-            matrix_result.append(li_st)
-    return matrix_result
+                li_st = []
+                for j in range(len(matrix_value1)):
+                    sum_value = 0
+                    for k in range(len(matrix_value2)):
+                        sum_value += (matrix_value1[i][k]*matrix_value2[k][j])
+                    li_st.append(sum_value)
+                matrix_result.append(li_st)
+        return matrix_result
+    
+    print("Error: Matrix shapes invalid for mult")
+    return None
+    
+        
 
 def add_matrix(matrix_value1, matrix_value2):
     '''
