@@ -6,16 +6,16 @@ def mult_matrix(matrix_value1, matrix_value2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+    matrix_result = []
     if len(matrix_value1[0]) != len(matrix_value2):
         print("Error! Matrix shapes invalid for mult")
-
-    matrix_result = []
-    for i in range(len(matrix_value1)):
-        li_st = []
-        for j in range(len(matrix_value1[i])):
-            li_st.append(matrix_value1[i][j] * matrix_value2[i][j])
-        matrix_result.append(li_st)
-    print(matrix_result)
+    else:
+        for i in range(len(matrix_value1)):
+            li_st = []
+            for j in range(len(matrix_value1[i])):
+                li_st.append(matrix_value1[i][j] * matrix_value2[i][j])
+            matrix_result.append(li_st)
+        return matrix_result
 
 def add_matrix(matrix_value1, matrix_value2):
     '''
@@ -34,7 +34,7 @@ def add_matrix(matrix_value1, matrix_value2):
             for j in range(len(matrix_value1[i])):
                 li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
             matrix_result.append(li_st)
-    print(matrix_result)
+        return matrix_result
 
 def read_matrix(m):
     '''
@@ -44,11 +44,6 @@ def read_matrix(m):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-
-    
-    
-    # if len(matrix_value1) != len(matrix_value2):
-    #     print("Error: Invalid input for the matrix")
 
 def main():
     # read matrix 1
