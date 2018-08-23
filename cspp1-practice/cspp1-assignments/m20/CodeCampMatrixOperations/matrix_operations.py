@@ -20,9 +20,7 @@ def mult_matrix(matrix_value1, matrix_value2):
                     li_st.append(sum_value)
             matrix_result.append(li_st)
     return matrix_result
-            # print(matrix_value1[i][0])
-            # print(matri[x_value2[i][j])
-            # print(matrix_value1[i][1])
+
 def add_matrix(matrix_value1, matrix_value2):
     '''
         check if the matrix shapes are similar
@@ -56,7 +54,7 @@ def read_matrix():
     m_val, n_val = input().split(",")
     m_val = int(m_val)
     for i in range(0, m_val):
-        matrix_value1.append(list(map(int,input().split())))
+        matrix_value1.append(list(map(int, input().split())))
 
     flag = True
     for i in matrix_value1:
