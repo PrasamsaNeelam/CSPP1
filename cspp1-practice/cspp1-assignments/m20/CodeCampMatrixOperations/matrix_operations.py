@@ -51,7 +51,7 @@ def read_matrix():
     '''
     
     matrix_value1 = []
-    m_val, n_val = input().split(",")
+    m_val, _ = input().split(",")
     m_val = int(m_val)
     for i in range(0, m_val):
         matrix_value1.append(list(map(int, input().split())))
