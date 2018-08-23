@@ -35,12 +35,12 @@ def add_matrix(matrix_value1, matrix_value2):
     if len(matrix_value1) != len(matrix_value2):
         print("Error: Matrix shapes invalid for addition")
         return None
-    
-    for i in range(len(matrix_value1)):
-        li_st = []
-        for j in range(len(matrix_value1[i])):
-            li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
-        matrix_result.append(li_st)
+    else:
+        for i in range(len(matrix_value1)):
+            li_st = []
+            for j in range(len(matrix_value1[i])):
+                li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
+            matrix_result.append(li_st)
     return matrix_result
 
 def read_matrix():
