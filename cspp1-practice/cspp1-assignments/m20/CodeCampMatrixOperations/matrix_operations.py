@@ -64,7 +64,7 @@ def read_matrix():
         count = 0
         for _ in i:
             count += 1
-        if count != matrix_value2[0]:
+        if count != matrix_value1[0]:
             flag = False
     return matrix_value1, flag
 
