@@ -16,8 +16,8 @@ def mult_matrix(matrix_value1, matrix_value2):
             for j in range(len(matrix_value1)):
                 sum_value = 0
                 for k in range(len(matrix_value2)):
-                    sum_value += (matrix_value1[i][k]*matrix_value2[k][j]) #+ (matrix_value1[i][1]*matrix_value2[j+1][k]) + (matrix_value1[i][2]*matrix_value2[j+2][k]))
-                li_st.append(sum_value)
+                    sum_value += (matrix_value1[i][k]*matrix_value2[k][j])
+                        li_st.append(sum_value)
             matrix_result.append(li_st)
     return matrix_result
             # print(matrix_value1[i][0])
@@ -35,12 +35,12 @@ def add_matrix(matrix_value1, matrix_value2):
     if len(matrix_value1) != len(matrix_value2):
         print("Error: Matrix shapes invalid for addition")
         return None
-    else:
-        for i in range(len(matrix_value1)):
-            li_st = []
-            for j in range(len(matrix_value1[i])):
-                li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
-            matrix_result.append(li_st)
+    
+    for i in range(len(matrix_value1)):
+        li_st = []
+        for j in range(len(matrix_value1[i])):
+            li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
+        matrix_result.append(li_st)
     return matrix_result
 
 def read_matrix():
@@ -68,6 +68,7 @@ def read_matrix():
     return matrix_value1, flag
 
 def main():
+    '''main function'''
     # read matrix 1
     (matrix_value1, flag1) = read_matrix()
     # read matrix 2
