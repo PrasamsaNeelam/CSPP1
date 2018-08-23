@@ -15,7 +15,7 @@ def mult_matrix(matrix_value1, matrix_value2):
             for j in range(len(matrix_value1[i])):
                 li_st.append(matrix_value1[i][j] * matrix_value2[i][j])
             matrix_result.append(li_st)
-        return matrix_result
+    return matrix_result
 
 def add_matrix(matrix_value1, matrix_value2):
     '''
@@ -34,7 +34,7 @@ def add_matrix(matrix_value1, matrix_value2):
             for j in range(len(matrix_value1[i])):
                 li_st.append(matrix_value1[i][j] + matrix_value2[i][j])
             matrix_result.append(li_st)
-        return matrix_result
+    return matrix_result
 
 def read_matrix(m):
     '''
