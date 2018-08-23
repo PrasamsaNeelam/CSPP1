@@ -12,11 +12,16 @@ def mult_matrix(matrix_value1, matrix_value2):
     else:
         for i in range(len(matrix_value1)):
             li_st = []
-            for j in range(len(matrix_value1[i])):
-                li_st.append(matrix_value1[i][j] * matrix_value2[i][j])
+            for j in range(len(matrix_value1)):
+                sum_value = 0
+                for k in range(len(matrix_value2)):
+                    sum_value += (matrix_value1[i][k]*matrix_value2[k][j]) #+ (matrix_value1[i][1]*matrix_value2[j+1][k]) + (matrix_value1[i][2]*matrix_value2[j+2][k]))
+                li_st.append(sum_value)
             matrix_result.append(li_st)
     return matrix_result
-
+            # print(matrix_value1[i][0])
+            # print(matrix_value2[i][j])
+            # print(matrix_value1[i][1])
 def add_matrix(matrix_value1, matrix_value2):
     '''
         check if the matrix shapes are similar
@@ -48,7 +53,7 @@ def read_matrix(m):
 def main():
     # read matrix 1
     matrix_value1 = []
-    m,n = input().split(",")
+    m, n = input().split(",")
     m = int(m)
     for i in range(0, m):
         matrix_value1.append(list(map(int,input().split())))
@@ -56,7 +61,7 @@ def main():
 
     # read matrix 2
     matrix_value2 = []
-    m,n = input().split(",")
+    m, n = input().split(",")
     m = int(m)
     for i in range(0, m):
         matrix_value2.append(list(map(int,input().split())))
