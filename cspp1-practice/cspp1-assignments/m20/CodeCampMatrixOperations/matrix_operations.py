@@ -9,6 +9,7 @@ def mult_matrix(matrix_value1, matrix_value2):
     matrix_result = []
     if len(matrix_value1[0]) != len(matrix_value2):
         print("Error! Matrix shapes invalid for mult")
+        return None
     else:
         for i in range(len(matrix_value1)):
             li_st = []
@@ -20,7 +21,7 @@ def mult_matrix(matrix_value1, matrix_value2):
             matrix_result.append(li_st)
     return matrix_result
             # print(matrix_value1[i][0])
-            # print(matrix_value2[i][j])
+            # print(matri[x_value2[i][j])
             # print(matrix_value1[i][1])
 def add_matrix(matrix_value1, matrix_value2):
     '''
@@ -33,6 +34,7 @@ def add_matrix(matrix_value1, matrix_value2):
     matrix_result = []
     if len(matrix_value1) != len(matrix_value2):
         print("Error! Matrix shapes invalid for addition")
+        return None
     else:
         for i in range(len(matrix_value1)):
             li_st = []
