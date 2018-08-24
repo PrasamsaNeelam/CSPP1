@@ -10,7 +10,7 @@ def is_horizontal(li_st, turn):
             if not li_st[i][j] is turn:
                 count += 1
         if count == 0:
-               return True
+            return True
         count = 0
     return False
 
@@ -74,7 +74,7 @@ def main():
         count += 1
     elif x_count > o_count+1 or o_count > x_count+1:
         print("invalid game")
-        count +=1
+        count += 1
     turn_x = 'x'
     boolean_x = (is_horizontal(li_st, turn_x)
                  or is_vertical(li_st, turn_x)
@@ -95,7 +95,7 @@ def main():
         print(turn_o)
         count += 1
     if count == 0:
-        print("Draw")
+        print("draw")
 
 if __name__ == '__main__':
     main()
