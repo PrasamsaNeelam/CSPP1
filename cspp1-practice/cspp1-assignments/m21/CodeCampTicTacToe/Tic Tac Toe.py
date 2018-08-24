@@ -75,12 +75,12 @@ def main():
     elif x_count > o_count+1 or o_count > x_count+1:
         print("invalid game")
         count +=1
-    turn = 'x'
+    turn_x = 'x'
     boolean_x = (is_horizontal(li_st, turn_x)
                  or is_vertical(li_st, turn_x)
                  or is_diagnol_forward(li_st, turn_x)
                  or is_diagnol_backward(li_st, turn_x))
-    turn = 'o'
+    turn_o = 'o'
     boolean_o = (is_horizontal(li_st, turn_o)
                  or is_vertical(li_st, turn_o)
                  or is_diagnol_forward(li_st, turn_o)
