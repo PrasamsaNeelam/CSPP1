@@ -40,8 +40,8 @@ def search(search_index, query):
     li_st = []
     if i in search_index:
         value = search_index[i]
-        for i in value:
-            li_st.append(i[0])
+        for j in value:
+            li_st.append(j[0])
     return li_st
 
 def process_queries(search_index, queries):
