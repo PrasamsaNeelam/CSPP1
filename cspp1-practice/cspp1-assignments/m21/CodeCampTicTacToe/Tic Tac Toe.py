@@ -80,7 +80,7 @@ def main():
                  or is_vertical(li_st, turn_x)
                  or is_diagnol_forward(li_st, turn_x)
                  or is_diagnol_backward(li_st, turn_x))
-    turn = 'o':
+    turn = 'o'
     boolean_o = (is_horizontal(li_st, turn_o)
                  or is_vertical(li_st, turn_o)
                  or is_diagnol_forward(li_st, turn_o)
