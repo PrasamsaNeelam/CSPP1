@@ -38,10 +38,10 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     li_st = []
-    if i in search_index:
-        value = search_index[i]
-        for j in value:
-            li_st.append(j[0])
+    if query in search_index:
+        value = search_index[query]
+        for i in value:
+            li_st.append(i[0])
     return li_st
 
 def process_queries(search_index, queries):
