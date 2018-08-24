@@ -19,8 +19,7 @@ def is_vertical(li_st, turn):
     count = 0
     for i in range(3):
         for j in range(3):
-            if not li_st
-          [j][i] is turn:
+            if not li_st[j][i] is turn:
                 count += 1
         if count == 0:
             return True
