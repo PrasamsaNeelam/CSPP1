@@ -9,7 +9,7 @@ def frequency_graph(dictionary):
     dict_final = dict_keys[:]
     dict_final.sort()
     for i in dict_final:
-        print(i+" "+"-"+" "+str(dict_values[dict_key.index(i)*"#"]))
+        print(i +" "+"-"+" "+(dict_values[dict_keys.index(i)*"#"]))
     return dict_final
 
 def main():
