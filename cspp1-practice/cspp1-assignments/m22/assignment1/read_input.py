@@ -11,7 +11,7 @@ def main():
         string_input = input()
         l.append(string_input)
     string_final = "".join(l)
-    return string_final
+    print(string_final)
         
     #     string_final += "".join((string_input).split("\n"))
     # print(string_final)
