@@ -5,7 +5,8 @@ each word
 
 def tokenize(string):
     a_dict = {}
-    string = ' '.join(e for e in string if e.isalnum())
+    string.split()
+    #string = ''.join(e for e in string if e.isalnum())
     for i in string:
         if i in a_dict:
             a_dict[i] += 1

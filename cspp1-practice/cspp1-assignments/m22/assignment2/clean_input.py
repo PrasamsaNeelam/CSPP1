@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 def clean_string(string):
     '''removes all the special characters and spaces'''
-    string = ''.join(e for e in string if e.isalnum())
+    string = ''.join(e for e in string if e.isalnum().split())
     return string
 
 def main():
