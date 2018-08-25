@@ -4,12 +4,19 @@ each word
 '''
 
 def tokenize(string):
-    pass
+    a_dict = {}
+    string = string.split()
+    for i in string:
+        if i in a_dict:
+            a_dict[i] += 1
+        else:
+            a_dict[i] = 1
+    return a_dict
             
 def main():
     input_value = int(input())
-    for i in range(input_value):
-    	string = input()
+    for _ in range(input_value):
+        string = input()
     tokenize(string)
 
 if __name__ == '__main__':
