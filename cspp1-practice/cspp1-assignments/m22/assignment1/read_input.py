@@ -9,9 +9,7 @@ def main():
     string_final = ""
     for _ in range(n_val):
         string_input = input()
-        l.append(string_input)
-    string_final = "".join(l)
-    print(string_final)
+        print(string_input)
         
     #     string_final += "".join((string_input).split("\n"))
     # print(string_final)

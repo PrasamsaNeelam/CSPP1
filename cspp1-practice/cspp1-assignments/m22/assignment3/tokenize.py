@@ -7,7 +7,10 @@ def tokenize(string):
     pass
             
 def main():
-    pass
+    input_value = int(input())
+    for i in range(input_value):
+    	string = input()
+    tokenize(string)
 
 if __name__ == '__main__':
     main()
