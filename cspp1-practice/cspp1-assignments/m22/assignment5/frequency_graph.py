@@ -9,12 +9,12 @@ def frequency_graph(dictionary):
     dict_final = dict_keys[:]
     dict_final.sort()
     for i in dict_final:
-        print(i+" - "+str(dict_values[dict_keys.index(i)*'#']))
-    print(dict_final)
+        print(i+" "+"-"+" "+str(dict_values[dict_keys.index(i)*"#"]))
+    return dict_final
 
 def main():
     dictionary = eval(input())
-    frequency_graph(dictionary)
+    print(frequency_graph(dictionary))
 
 if __name__ == '__main__':
     main()
