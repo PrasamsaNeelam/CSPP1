@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
     a_dict = {}
-    string = string.split()
+    string = string.split().split(";")
     for i in string:
         if i in a_dict:
             a_dict[i] += 1
