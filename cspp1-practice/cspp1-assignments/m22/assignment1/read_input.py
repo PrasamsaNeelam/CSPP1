@@ -7,7 +7,7 @@ def main():
     string_final = ""
     for i in range(n_val):
         string_input = input()
-        string_final += "".join(string_input.split("\n"))
+        string_final += "".join((string_input).split("\n"))
     print(string_final)
 
 if __name__ == '__main__':
