@@ -17,7 +17,7 @@ def main():
     input_value = int(input())
     for _ in range(input_value):
         string = input()
-    result = tokenize(string)
+    print(tokenize(string))
 
 if __name__ == '__main__':
     main()
