@@ -4,6 +4,7 @@ each word
 '''
 
 def tokenize(string):
+    '''returns a dictionary with its frequency count'''
     a_dict = {}
     string = string.split()
     #string = ''.join(e for e in string if e.isalnum())
@@ -13,8 +14,9 @@ def tokenize(string):
         else:
             a_dict[i] = 1
     return a_dict
-            
+
 def main():
+    '''reads the string input'''
     input_value = int(input())
     for _ in range(input_value):
         string = input()
